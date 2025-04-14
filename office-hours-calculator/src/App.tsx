@@ -1,5 +1,5 @@
 import "./App.css";
-import OfficeHoursCalculator from "./page";
+import OfficeHoursCalculator from "./landing/page";
 
 function App() {
   return (
