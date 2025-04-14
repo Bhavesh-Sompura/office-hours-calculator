@@ -54,6 +54,7 @@ const OfficeHoursCalculator: React.FC = () => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-6 sm:px-6 lg:px-8 bg-white rounded-2xl shadow-md mt-10 space-y-6">
+      <title>Office Hours Calculator</title>
       <div className="text-center bg-blue-100 p-3 rounded-xl text-blue-800 font-semibold text-lg">
         Leave Time: {calculatedLeaveTime}
       </div>
