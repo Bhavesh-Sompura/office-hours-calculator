@@ -9,7 +9,7 @@ interface TimeRange {
 const parseTime = (time: string) => parse(time, "HH:mm", new Date());
 
 const calculateBreakMinutes = (breaks: TimeRange[]) =>
-  breaks.reduce((total, b, index) => {
+  breaks.reduce((total, b) => {
     if (!b.start || !b.end) return total;
     const start = parseTime(b.start);
     const end = parseTime(b.end);
