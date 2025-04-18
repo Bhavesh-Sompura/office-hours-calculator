@@ -21,8 +21,8 @@ const OfficeHoursCalculator: React.FC = () => {
   const [startTime, setStartTime] = useState("10:38");
 
   const [breaks, setBreaks] = useState<TimeRange[]>([
-    { start: "13:17", end: "14:03" },
-    { start: "18:05", end: "18:29" },
+    { start: "13:00", end: "14:00" },
+    { start: "17:00", end: "18:00" },
   ]);
 
   const handleBreakChange = (
@@ -53,9 +53,9 @@ const OfficeHoursCalculator: React.FC = () => {
   );
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6 sm:px-6 lg:px-8 bg-white rounded-2xl shadow-md mt-10 space-y-6">
+    <div className="max-w-4xl mx-auto px-4 py-6 sm:px-6 lg:px-8 bg-white dark:bg-black rounded-2xl shadow-md mt-3 space-y-6">
       <title>Office Hours Calculator</title>
-      <div className="text-center bg-blue-100 p-3 rounded-xl text-blue-800 font-semibold text-lg">
+      <div className="text-center bg-blue-100 p-3 rounded-xl text-blue-800 dark:text-white font-semibold text-lg">
         Leave Time: {calculatedLeaveTime}
       </div>
 
@@ -68,7 +68,7 @@ const OfficeHoursCalculator: React.FC = () => {
           Office Hours (hrs)
           <input
             type="number"
-            className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full rounded-sm border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 px-3 py-1"
             value={officeHours}
             onChange={(e) => setOfficeHours(Number(e.target.value))}
           />
@@ -78,7 +78,7 @@ const OfficeHoursCalculator: React.FC = () => {
           Start Time
           <input
             type="time"
-            className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            className="mt-1 block w-full rounded-sm border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 px-3 py-1"
             value={startTime}
             onChange={(e) => setStartTime(e.target.value)}
           />
@@ -94,14 +94,14 @@ const OfficeHoursCalculator: React.FC = () => {
           >
             <input
               type="time"
-              className="rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="rounded-sm border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 px-3 py-1"
               value={b.start}
               onChange={(e) => handleBreakChange(i, "start", e.target.value)}
               required={i === 0}
             />
             <input
               type="time"
-              className="rounded-lg border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="rounded-sm border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 px-3 py-1"
               value={b.end}
               onChange={(e) => handleBreakChange(i, "end", e.target.value)}
               required={i === 0}
