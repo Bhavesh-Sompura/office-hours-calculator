@@ -4,9 +4,12 @@ import OfficeHoursCalculator from "./landing/page";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-evenly bg-linear-to-r from-gray-700 via-rose-500 to-gray-700 md:h-screen w-full py-10">
-      <HomeTitle />
-      <OfficeHoursCalculator />
+    <div className="flex flex-col items-center justify-center bg-white min-h-screen w-full py-10">
+      <header className="text-4xl font-bold text-white mb-10">
+        Office Hours Calculator
+      </header>
+        <HomeTitle />
+        <OfficeHoursCalculator />
     </div>
   );
 }
